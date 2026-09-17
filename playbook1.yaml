@@ -1,0 +1,9 @@
+- name: install Apache on web server 
+  hosts: web 
+  become: yes 
+  tasks: 
+    - name: install Apache http 
+      apt: 
+        name: apache2
+        state: present
+        update_cache: yes
